@@ -12,14 +12,41 @@
     left: 10px;
 }
 
-.card-body{
+.instructions{
     background-color:lightsalmon;
     color: green;
     font-size:18px; 
    font-weight: bold;
+   padding: 10px;
 }
 
-
-
+.randomNumber{
+    background-color: green;
+    height: 175px;
+    width: auto;
+    text-align:center;
+}
+.score{
+    background-color: lightseagreen;
+    height: 175px;
+    width: auto;
+    text-align:left;
+    padding: 10px;
+}
+.scoreHeader{
+    height: auto;
+    text-align:center;
+    background-color:lightskyblue;
+    color:white;
+    font-weight: bold;
+    padding: 1px;
+}
+.totalScore{
+    background-color: lightskyblue;
+    color:white;
+    font-weight:bold;
+    height: 100px;
+    
+}
 
 /*End CSS*/
