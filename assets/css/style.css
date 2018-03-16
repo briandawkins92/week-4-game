@@ -25,6 +25,9 @@
     height: 175px;
     width: auto;
     text-align:center;
+    color:white;
+    font-weight:bold;
+    font-size: 48px;
 }
 .score{
     background-color: lightseagreen;
@@ -46,7 +49,8 @@
     color:white;
     font-weight:bold;
     height: 100px;
-    
+    text-align: center;
+    padding: 20px;
 }
 
 /*End CSS*/
