@@ -11,16 +11,17 @@ var yellowCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
 var silverCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
 var totalScore = [""];
 var randomNumber = [""];
+$(".randomNumber").append(gameNumber); 
 
-function restartGame(){
-    gameNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-    pinkCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-    greenCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-    yellowCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-    silverCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-    totalScore = [];
-    console.log("game is restarted");
-}
+// function restartGame(){
+//     gameNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+//     pinkCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
+//     greenCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
+//     yellowCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
+//     silverCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
+//     totalScore = [];
+//     console.log("game is restarted");
+// }
 
 $(document).ready(function() {
     gameNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
@@ -28,36 +29,48 @@ $(document).ready(function() {
     greenCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
     yellowCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
     silverCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-    totalScore = [""];
+    totalScore = 0;
     wins = 0;
     losses = 0;
-    $(".randomNumber").append(gameNumber);
-    
-
-   
 });
-
-
-// function showInTotalScore () {
-    $("#pink-crystal").on("click", function() {
-        console.log(pinkCrystal);  
-        $(".totalScore").append(pinkCrystal);
-        totalScore.push(pinkCrystal);
-        totalScore = parseInt(totalScore);
+$(document).on("click", function(){
+    // if (totalScore === gameNumber){
+    //     wins++;
+    // } 
+    if (totalScore > gameNumber){
+        console.log("loser");
         
+    }
 
-   })
+})
+    $("#pink-crystal").on("click", function() {
+     totalScore += pinkCrystal
+    $(".totalScore").html(totalScore);
+    })
    $("#green-crystal").on("click", function() {
-       console.log(greenCrystal);
+    totalScore += greenCrystal
+   $(".totalScore").html(totalScore);
    })
    $("#yellow-crystal").on("click", function() {
-       console.log(yellowCrystal);
+    totalScore += yellowCrystal
+   $(".totalScore").html(totalScore);
    })
    $("#silver-crystal").on("click", function() {
-       console.log(silverCrystal);
-   })
-// }
+    totalScore += silverCrystal
+   $(".totalScore").html(totalScore);
+    })
+    
+
+
 
 });
+
+
+
+        // function add(a, b) {
+        //     return a + b;
+        // }
+        
+        // console.log(sum);
 
 /* End Javascript*/

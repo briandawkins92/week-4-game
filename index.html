@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
+<script src="https://code.jquery.com/jquery.js"></script>
 <script src="assets/javascript/game.js"></script>
 
 <html lang="en">
@@ -43,17 +42,17 @@
         <div class="container">
                 <div class="row">
                         <div class="col-4">
-                                <div class="card">
+                                <div class="randomNumber">
                                         <div>
-                                        <p class="randomNumber"></p>
+                                        <p></p>
                                         </div>
                                 </div>
                         </div>
                         <div class="col-2">
-                                <div class="card">
-                                        <div class="score">
-                                                <p>Wins:</p>
-                                                <p>Losses:</p>
+                                <div class="score">
+                                        <div>
+                                                <p id="wins">Wins:</p>
+                                                <p id="losses">Losses:</p>
                                         </div>
                                 </div>
                         </div>
@@ -61,27 +60,30 @@
                 </div>
         </div>
         <br>
-        <div class="container">
-                        <div class="row">
-                                <div class="col-2" type="button" id="pink-crystal">  
-                                        <img src ="assets/images/1crystal.png" class="img-thumbnail">
-                                </div>
-                                <div class="col-2" type="button" id="green-crystal">  
-                                        <img src ="assets/images/2crystal.png" class="img-thumbnail">
-                                </div>
-                                <div class="col-2" type="button" id="yellow-crystal">  
-                                        <img src ="assets/images/3crystal.png" class="img-thumbnail">
-                                </div>
-                                <div class="col-2" type="button" id="silver-crystal">  
-                                        <img src ="assets/images/4crystal.png" class="img-thumbnail">
-                                </div>
+        <div>
+                        <div class="buttonsRow">
+                                <button type="button" class="btn btn-outline-light" id="pink-crystal">
+                                        <img src ="assets/images/1crystal.png" class="img-thumbnail" height=200px width=200px>
+                                </button>
+                              
+                                <button type="button" class="btn btn-outline-light" id="green-crystal">  
+                                        <img src ="assets/images/2crystal.png" class="img-thumbnail" height=200px width=200px>
+                                </button>
+                              
+                                <button type="button" class="btn btn-outline-light" id="yellow-crystal">  
+                                        <img src ="assets/images/3crystal.png" class="img-thumbnail" height=175px width=175px>
+                                </button>
+                             
+                                <button type="button" class="btn btn-outline-light" id="silver-crystal">  
+                                        <img src ="assets/images/4crystal.png" class="img-thumbnail" height=175px width=175px>
+                                </button>
                         </div>
         </div>
         <div class="container">
         <div class="row">
                 <div class="col-4">
-                        <div class="card">
-                                <div class="scoreHeader">
+                        <div class="scoreHeader">
+                                <div>
                                 <p>Your total score is:</p>
                                 </div>
                         </div>
@@ -93,9 +95,9 @@
         <div class="container">
                         <div class="row">
                                 <div class="col-4">
-                                        <div class="card">
+                                        <div  class="totalScore">
                                                 <div>
-                                                <h1 class="totalScore"></h1>
+                                                <h1></h1>
                                                 </div>
                                         </div>
                                 </div>
