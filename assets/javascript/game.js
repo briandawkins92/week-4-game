@@ -19,44 +19,44 @@ function restartGame(){
     greenCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
     yellowCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
     silverCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-    $(".totalScore").html(0);
     var randomNumber = [""];
     $(".randomNumber").html(gameNumber);
+    totalScore = 0;
+    $(".totalScore").html("<h1>" + totalScore + "</h1>");
     }
-    
-$(document).ready(function() {
-    pinkCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-    greenCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-    yellowCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-    silverCrystal = Math.floor(Math.random() * (12 - 1 + 1)) + 12;
-});
-  
+
 $("#pink-crystal").on("click", function() {
     totalScore += pinkCrystal
     $(".totalScore").html(totalScore);
+    console.log(pinkCrystal);
 })
 $("#green-crystal").on("click", function() {
     totalScore += greenCrystal
     $(".totalScore").html(totalScore);
+    console.log(greenCrystal);
 })
 $("#yellow-crystal").on("click", function() {
     totalScore += yellowCrystal
     $(".totalScore").html(totalScore);
+    console.log(yellowCrystal);
 })
 $("#silver-crystal").on("click", function() {
     totalScore += silverCrystal
     $(".totalScore").html(totalScore);
+    console.log(silverCrystal);
 })
 $(document).on("click", function() {
     if (totalScore > gameNumber) {
     losses++;
     $("#losses").html("<p> Losses" + ":" + losses + "</p>");
-    restartGame();
+    restartGame ();
+    console.log(totalScore);
 }
 if (totalScore === gameNumber) {
     wins++;
     $("#wins").html("<p> Wins" + ":" + wins + "</p>");
-    restartGame();
+    restartGame ();
+    console.log(totalScore);
 }
 })
 });
